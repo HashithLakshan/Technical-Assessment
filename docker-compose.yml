@@ -6,7 +6,7 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: Hasith456
+      MYSQL_ROOT_PASSWORD: Gr3atS3cur!ty_2025
       MYSQL_DATABASE: toDoAplication
     volumes:
       - db_data:/var/lib/mysql
@@ -23,7 +23,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/toDoAplication
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: Hasith456
+      SPRING_DATASOURCE_PASSWORD: Gr3atS3cur!ty_2025
 
   frontend:
     build:
@@ -34,6 +34,20 @@ services:
       - "4200:80"
     depends_on:
       - backend
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - "8082:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: Gr3atS3cur!ty_2025
+    depends_on:
+      - db 
 
 volumes:
   db_data:
