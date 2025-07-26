@@ -56,3 +56,7 @@ Use the following credentials to log in:
 
 * **Username:** root  
 * **Password:** Gr3atS3cur\!ty\_2025
+
+## **🛑 Stopping the Application**
+
+To stop all the running application containers, return to the terminal where the application is running and press Ctrl \+ C.
